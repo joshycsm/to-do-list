@@ -1,6 +1,6 @@
 .list {
   color: white;
-  width: 300px;
+  width: 350px;
   background-color: magenta;
   height: 50px;
   margin: 20px auto;
@@ -28,6 +28,7 @@
   border: 0;
   color: white;
   font-size: 18px;
+  width: 300px;
 }
 
 .list p input:focus {
