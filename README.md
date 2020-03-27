@@ -22,5 +22,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 For more info with using react-fontawesome and react-flip-move, you can check out the docs here:
 
-[react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
+[react-fontawesome](https://github.com/FortAwesome/react-fontawesome)<br />
 [react-flip-move](https://github.com/joshwcomeau/react-flip-move)
