@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import ListItems from "./ListItems";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -20,6 +19,7 @@ class App extends Component {
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.setUpdate = this.setUpdate.bind(this);
   }
 
   handleInput(event) {
@@ -54,7 +54,17 @@ class App extends Component {
       items: filteredItems
     });
   }
-
+  setUpdate(text, key) {
+    const items = this.state.items;
+    items.map(item => {
+      if (item.key === key) {
+        item.text = text;
+      }
+    });
+    this.setState({
+      items: items
+    });
+  }
   render() {
     return (
       <div className="App">
@@ -68,7 +78,11 @@ class App extends Component {
           <button type="submit">Add To Do</button>
         </form>
 
-        <ListItems items={this.state.items} deleteItem={this.deleteItem} />
+        <ListItems
+          items={this.state.items}
+          deleteItem={this.deleteItem}
+          setUpdate={this.setUpdate}
+        />
       </div>
     );
   }
